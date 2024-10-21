@@ -1,0 +1,42 @@
+/* Add this to your CSS file */
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #282A36;
+    padding: 10px;
+}
+
+.chatbox-header {
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.chatbox-messages {
+    flex: 1;
+    overflow-y: auto;
+    margin: 10px 0;
+}
+
+.message {
+    margin: 5px 0;
+}
+
+.message.sent {
+    text-align: right;
+}
+
+.chatbox-input {
+    display: flex;
+}
+
+.chatbox-input input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.chatbox-input button {
+    padding: 5px 10px;
+}

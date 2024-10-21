@@ -31,6 +31,7 @@ const getAllConnectedClients = (roomId) => {
   });
 }
 io.on("connection", (socket) => {
+  
   // console.log(`User connected: ${socket.id}`);
   socket.on("join-room", ({ roomId, username }) => {
     userSocketMap[socket.id] = username;
@@ -66,6 +67,13 @@ io.on("connection", (socket) => {
     delete userSocketMap[socket.id];
     socket.leave();
   })
+
+  // Add this inside io.on("connection", (socket) => { ... });
+
+socket.on('send-message', (msgData) => {
+  socket.to(msgData.roomId).emit('receive-message', msgData);
+});
+
 
 });
 

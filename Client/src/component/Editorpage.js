@@ -12,6 +12,9 @@ import { FaVideo } from "react-icons/fa6";
 import { CiVideoOff } from "react-icons/ci";
 import AgoraRTC from 'agora-rtc-sdk-ng';
 
+// Import ChatBox at the top
+import ChatBox from './ChatBox';
+
 
 function Editorpage() {
   const codeRef = useRef(null);
@@ -195,6 +198,7 @@ function Editorpage() {
     navigate('/');
   }
 
+  
 
   return (
     <>
@@ -209,11 +213,16 @@ function Editorpage() {
                 <Client key={client.socketid} username={client.username} />
               ))}
             </div>
-
+            
+             <div className='col-md-2 bg-dark text-light d-flex flex-column' style={{ boxShadow: "2px 0px 4px rgba(0,0,0,0.1)" }}>
+            {/* Other sidebar content */}
+            <ChatBox socketRef={socketRef} roomId={roomId} username={location.state?.username} />
+        </div>
             <div className='mt-auto d-none d-md-block'>
               <hr style={{}} />
               <p className='text-center text-secondary'></p>
             </div>
+            
           </div>
 
 
