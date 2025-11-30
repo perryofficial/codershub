@@ -92,29 +92,29 @@ function ChatBox({ socketRef, roomId, username }) {
         backgroundColor: '#444',
     };
 
-    const chatboxInputStyle = {
-        display: 'flex',
-        marginTop: '10px',
-    };
+   const chatboxInputStyle = {
+    display: 'flex',
+    flexDirection: 'column', // stack vertically
+    marginTop: '10px',
+};
 
-    const inputStyle = {
-        flex: 1,
-        padding: '1px',
-        marginRight: '5px',
-        border: '1px solid #444',
-        borderRadius: '5px',
-        backgroundColor: '#282A36',
-        color: '#fff',
-    };
+const inputStyle = {
+    padding: '8px',
+    marginBottom: '5px', // add space before button
+    border: '1px solid #444',
+    borderRadius: '5px',
+    backgroundColor: '#282A36',
+    color: '#fff',
+};
 
-    const buttonStyle = {
-        padding: '2px 1px',
-        border: 'none',
-        borderRadius: '5px',
-        backgroundColor: '#007bff',
-        color: '#fff',
-        cursor: 'pointer',
-    };
+const buttonStyle = {
+    padding: '8px',
+    border: 'none',
+    borderRadius: '5px',
+    backgroundColor: '#007bff',
+    color: '#fff',
+    cursor: 'pointer',
+};
 
     return (
         <div style={chatboxStyle}>
@@ -137,6 +137,7 @@ function ChatBox({ socketRef, roomId, username }) {
                     placeholder="Type a message..."
                     style={inputStyle}
                 />
+                
                 <button type="submit" style={buttonStyle}>Send</button>
             </form>
         </div>

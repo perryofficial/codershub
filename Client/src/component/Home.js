@@ -56,11 +56,11 @@ function Home() {
         </div>
         <div className='d-flex flex-column flex-md-row mt-5 justify-content-center align-items-center w-100'>
 
-          <div className='col-12 col-md-6 d-flex justify-content-center align-items-center text-white'>
+          {/* <div className='col-12 col-md-6 d-flex justify-content-center align-items-center text-white'>
             <div>
               <img className='img-fluid mx-auto d-block mb-3 rounded' src="/images/HomeImage.png" style={{ maxWidth: '85%' }} alt="Home" />
             </div>
-          </div>
+          </div> */}
 
           <div className='col-12 col-md-6 d-flex bg-dark justify-content-center align-items-center text-white'>
             <div className='card border-0 p-3 mb-6 bg-dark w-100'>
